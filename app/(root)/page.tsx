@@ -5,6 +5,7 @@
 import ProductList from "@/components/shared/product/product-list";
 // import sampleData from "@/db/sample-data";
 import { getLatestProduct } from "@/lib/actions/product.action";
+import { Product } from "@/types";
 
 // const delay = (ms:number) =>
 //   new Promise((resolve) => {
@@ -18,7 +19,7 @@ export default async function Home() {
   return (
     <div className='space-y-8'>
       <h2 className='h2-bold'>Latest Products</h2>
-      <ProductList title='Newest Arrivals' products={latestProduct} />
+      <ProductList title='Newest Arrivals' products={latestProduct as unknown as Product[]} />
     </div>
   );
 }

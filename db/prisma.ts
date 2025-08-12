@@ -1,4 +1,3 @@
-import { Product } from "@/types";
 import { neonConfig } from "@neondatabase/serverless";
 import { PrismaNeon } from "@prisma/adapter-neon";
 import { PrismaClient } from "@prisma/client";
@@ -16,12 +15,12 @@ export const prisma = new PrismaClient({ adapter }).$extends({
   result: {
     product: {
       price: {
-        compute(product: Product) {
+        compute(product) {
           return product.price.toString();
         },
       },
       rating: {
-        compute(product: Product) {
+        compute(product) {
           return product.rating.toString();
         },
       },

@@ -18,7 +18,7 @@ const ProductList = ({
       <h2 className="font-bold text-2xl mb-4">{title}</h2>
       {limitedProduct.length > 0 ? (
         <div className="grid gap-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {limitedProduct.map((product: Product) => {
+          {limitedProduct.map((product) => {
             return <ProductCard product={product} key={product.slug} />;
           })}
         </div>
