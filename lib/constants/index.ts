@@ -12,3 +12,23 @@ export const THEME_DROPDOWN = ["light", "dark", "system"];
 
 export const LATEST_PRODUCT_LIMIT =
   Number(process.env.LATEST_PRODUCT_LIMIT) || 4;
+
+export const signInDefaultValues = {
+  email: "",
+  password: ""
+}
+
+export const signUpDefaultValues = {
+  name: '',
+  email: '',
+  password: '',
+  confirmPassword: '',
+};
+
+export const shippingAddressDefaultValues = {
+  fullName: 'John Doe',
+  streetAddress: '123 Main St',
+  city: 'Anytown',
+  postalCode: '12345',
+  country: 'USA',
+};
