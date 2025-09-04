@@ -8,9 +8,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { shippingAddressSchema } from "@/lib/validators";
 import { ControllerRenderProps } from "react-hook-form";
 import { shippingAddressDefaultValues } from "@/lib/constants";
-import { toast } from "sonner";
+// import { toast } from "sonner";
 import { useTransition } from "react";
-import { updateUserAddress } from "@/lib/actions/user.actions";
+// import { updateUserAddress } from "@/lib/actions/user.actions";
 // import CheckoutSteps from "@/components/shared/checkout-steps";
 import {
   Form,
@@ -37,8 +37,8 @@ const ShippingAddressForm = ({
     defaultValues: address || shippingAddressDefaultValues,
   });
 
-  const onSubmit = (form: unknown) => {
-    console.log("====>>", form)
+  const onSubmit = () => {
+    console.log("submitted")
   }
 
   return (

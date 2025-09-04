@@ -6,6 +6,7 @@ import {
   signUpFormSchema,
   shippingAddressSchema,
 } from "@/lib/validators";
+import { Control, FieldValues } from "react-hook-form";
 
 export type User = z.infer<typeof signUpFormSchema> & {
   id: string;
@@ -23,3 +24,12 @@ export type Cart = z.infer<typeof insertCartSchema>;
 export type CartItem = z.infer<typeof cartItemSchema>;
 
 export type ShippingAddress = z.infer<typeof shippingAddressSchema>;
+
+
+export interface TextFieldProps<T extends FieldValues> {
+  control: Control
+  name: keyof T & string
+  label: string
+  placeholder?: string
+  description?: string
+}

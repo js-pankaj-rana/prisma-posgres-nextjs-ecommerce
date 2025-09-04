@@ -44,7 +44,11 @@ const AddToCart = ({
 
   const handleRemoveFromCart = async () => {
     startTransition(async () => {
-      const res = await removeItemFromCart(item.productId);
+      const res: {
+        status?: string;
+        success: boolean;
+        message?: string | undefined;
+      } = await removeItemFromCart(item.productId);
       if (!res.status) {
         toast.error(res.message);
         return;
